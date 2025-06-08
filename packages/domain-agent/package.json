@@ -1,0 +1,42 @@
+{
+  "name": "@forge/domain-agent",
+  "description": "Automated DNS configuration for AT Protocol handles.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ÆForge",
+    "email": "hello@privateclient.ai"
+  },
+  "homepage": "https://privateclient.ai",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://ashashash.com/forge-os"
+  },
+  "keywords": [
+    "dns",
+    "domain",
+    "atproto",
+    "automation"
+  ],
+  "main": "./src/index.ts",
+  "types": "./.tsbuild/index.d.ts",
+  "files": [],
+  "scripts": {
+    "test": "yarn run -T jest",
+    "build": "yarn run -T tsx ../../internal/scripts/build-package.ts",
+    "lint": "yarn run -T tsx ../../internal/scripts/lint.ts"
+  },
+  "dependencies": {
+    "@tldraw/utils": "workspace:*",
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "lazyrepo": "0.0.0-alpha.27"
+  },
+  "jest": {
+    "preset": "../../internal/config/jest/node/jest-preset.js",
+    "moduleNameMapper": {
+      "^~(.*)": "<rootDir>/src/$1"
+    }
+  }
+}
